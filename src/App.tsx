@@ -69,6 +69,19 @@ export default function App() {
 
       <main id="main-content" tabIndex={-1}>
         <section className="hero-v2" id="top" data-nav-theme="dark" aria-labelledby="hero-title">
+          <div className="section-video-bg" aria-hidden="true">
+            <video
+              className="section-video-bg__media"
+              autoPlay
+              loop
+              muted
+              playsInline
+              preload="auto"
+            >
+              <source src={getAsset("assets/videos/hero-bg.mp4")} type="video/mp4" />
+            </video>
+            <div className="section-video-bg__overlay section-video-bg__overlay--hero" />
+          </div>
           <GrainOverlay />
           <motion.div
             className="hero-v2__copy"
@@ -119,6 +132,19 @@ export default function App() {
         </section>
 
         <section className="services-band" data-nav-theme="dark" aria-labelledby="services-band-title">
+          <div className="section-video-bg" aria-hidden="true">
+            <video
+              className="section-video-bg__media"
+              autoPlay
+              loop
+              muted
+              playsInline
+              preload="auto"
+            >
+              <source src={getAsset("assets/videos/capabilities-bg.mp4")} type="video/mp4" />
+            </video>
+            <div className="section-video-bg__overlay section-video-bg__overlay--services" />
+          </div>
           <div className="section-wrap services-band__top">
             <ScrollReveal><SectionMarker>02 — Capabilities</SectionMarker></ScrollReveal>
             <ScrollFloat distance={35}><h2 id="services-band-title">Roofing services with<br /><em>discipline built in.</em></h2></ScrollFloat>
