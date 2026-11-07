@@ -71,7 +71,7 @@ export default function App() {
         <section className="hero-v2" id="top" data-nav-theme="dark" aria-labelledby="hero-title">
           <div className="section-video-bg" aria-hidden="true">
             <video
-              className="section-video-bg__media"
+              className="section-video-bg__media section-video-bg__media--hero"
               autoPlay
               loop
               muted
