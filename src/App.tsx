@@ -7,6 +7,7 @@ import { ScrollReveal } from "@/components/ui/scroll-reveal";
 import { GrainOverlay } from "@/components/ui/grain-overlay";
 import { Preloader } from "@/components/ui/preloader";
 import { ProjectCarousel } from "@/components/project-carousel";
+import { getAsset } from "@/lib/utils";
 
 const navItems: NavItem[] = [
   { name: "Home", url: "#top", icon: Play },
@@ -22,25 +23,25 @@ const reviews = [
     name: "Bryan S",
     location: "Texas, 1234 Elm Street, Austin, TX 78701",
     quote: "Robert did a good job handling all the details of getting a new roof. He was a good advocate in dealing with the insurance company and knew the best way to get the best results for a new roof. Solid job!",
-    image: "/assets/roofing-generated/project-cottage.png",
+    image: getAsset("assets/roofing-generated/project-cottage.png"),
   },
   {
     name: "Megan R",
     location: "Fort Worth, TX",
     quote: "The team showed up prepared, explained every step, and left the property cleaner than they found it. The finished roof looks exceptional.",
-    image: "/assets/roofing-generated/service-installation.png",
+    image: getAsset("assets/roofing-generated/service-installation.png"),
   },
   {
     name: "Chris T",
     location: "Burleson, TX",
     quote: "From inspection to installation, the process was clear and professional. We always knew what was happening and why.",
-    image: "/assets/roofing-generated/service-inspection.png",
+    image: getAsset("assets/roofing-generated/service-inspection.png"),
   },
   {
     name: "Lauren M",
     location: "Arlington, TX",
     quote: "A thoughtful crew, precise work, and a roof that feels built for the next twenty years. We would recommend them without hesitation.",
-    image: "/assets/roofing-generated/project-mountain-home.png",
+    image: getAsset("assets/roofing-generated/project-mountain-home.png"),
   },
 ];
 
@@ -96,7 +97,7 @@ export default function App() {
             transition={{ duration: 0.82, delay: 0.16, ease: [0.23, 1, 0.32, 1] }}
           >
               <div className="hero-v2__media-frame">
-                <img className="hero-v2__image" src="/assets/roofing-generated/hero-roofer.png" alt="Roofer standing on the timber frame of a home" />
+                <img className="hero-v2__image" src={getAsset("assets/roofing-generated/hero-roofer.png")} alt="Roofer standing on the timber frame of a home" />
                 <div className="hero-v2__image-caption">01 / FIELD NOTES<br /><span>Burleson, Texas</span></div>
               </div>
           </motion.div>
@@ -108,12 +109,12 @@ export default function App() {
             <h2 id="services-title">Complete roofing and<br /><em>home restoration.</em></h2>
           </ScrollReveal>
           <div className="intro-v2__grid">
-            <ScrollReveal className="image-tile image-tile--large" delay={0.08}><div className="image-tile__frame"><img src="/assets/roofing-generated/service-installation.png" alt="Roof installation in progress" loading="lazy" /></div><span>Metal roof installation / 01</span></ScrollReveal>
+            <ScrollReveal className="image-tile image-tile--large" delay={0.08}><div className="image-tile__frame"><img src={getAsset("assets/roofing-generated/service-installation.png")} alt="Roof installation in progress" loading="lazy" /></div><span>Metal roof installation / 01</span></ScrollReveal>
             <ScrollReveal className="intro-v2__copy" delay={0.16}>
               <p className="body-copy">Texas Elite Roofing brings clear communication, careful work, and durable materials to every project.</p>
               <div className="intro-v2__details"><span>Burleson, Fort Worth,<br />Arlington, Colleyville,<br />Keller, TX</span><span>Repair<br />Replacement<br />Restoration</span></div>
             </ScrollReveal>
-            <ScrollReveal className="image-tile image-tile--small" delay={0.24}><div className="image-tile__frame"><img src="/assets/roofing-generated/about-metal-roof-detail.png" alt="Close view of charcoal standing-seam metal roofing" loading="lazy" /></div><span>Material study / 02</span></ScrollReveal>
+            <ScrollReveal className="image-tile image-tile--small" delay={0.24}><div className="image-tile__frame"><img src={getAsset("assets/roofing-generated/about-metal-roof-detail.png")} alt="Close view of charcoal standing-seam metal roofing" loading="lazy" /></div><span>Material study / 02</span></ScrollReveal>
           </div>
         </section>
 
@@ -126,10 +127,10 @@ export default function App() {
             {["Repairs", "Installation", "Inspections", "Restoration"].map((service, index) => (
               <div className="services-marquee__item" key={service}>
                 <img src={[
-                  "/assets/roofing-generated/service-repair.png",
-                  "/assets/roofing-generated/service-installation.png",
-                  "/assets/roofing-generated/service-inspection.png",
-                  "/assets/roofing-generated/project-cottage.png",
+                  getAsset("assets/roofing-generated/service-repair.png"),
+                  getAsset("assets/roofing-generated/service-installation.png"),
+                  getAsset("assets/roofing-generated/service-inspection.png"),
+                  getAsset("assets/roofing-generated/project-cottage.png"),
                 ][index]} alt="" loading="lazy" />
                 <strong>{service}</strong>
               </div>
@@ -150,7 +151,7 @@ export default function App() {
           <ScrollReveal className="about-v2__title"><SectionMarker>04 — The better way</SectionMarker><h2 id="about-title">Good work starts<br />with <em>respect.</em></h2></ScrollReveal>
           <div className="about-v2__grid">
             <ScrollReveal className="about-v2__copy" delay={0.1}><p className="body-copy">We believe homeowners have a right to information, a right to respect, and a right to be part of the solution. That is how we approach every roof, every room, and every neighbor we serve.</p><a className="text-link" href="#contact">Talk through your project <ArrowDownRight size={16} /></a></ScrollReveal>
-            <ScrollReveal className="image-tile about-v2__image" delay={0.2}><img src="/assets/roofing-generated/project-mountain-home.png" alt="Contemporary mountain home with a dramatic metal roof" loading="lazy" /></ScrollReveal>
+            <ScrollReveal className="image-tile about-v2__image" delay={0.2}><img src={getAsset("assets/roofing-generated/project-mountain-home.png")} alt="Contemporary mountain home with a dramatic metal roof" loading="lazy" /></ScrollReveal>
           </div>
         </section>
 
